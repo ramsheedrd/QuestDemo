@@ -1,0 +1,100 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+.card {
+    width: 300px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    margin-bottom: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.card img {
+    width: inherit;
+    height: 320px;
+    object-fit: cover;
+}
+
+
+.card p {
+    padding: 15px;
+    padding-top: 0px;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:15px;
+    height: 60px;
+    align-items: baseline;
+}
+
+i{
+    color: red;
+}
+
+.close {
+    position: absolute;
+    display: inline-block;
+    margin-left: 240px;
+    margin-top: 20px;
+    height: 40px;
+    width:40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    border: none;
+    font-size: 1.5em;
+    outline: none;
+
+}
+
+.alert {
+    background-color: rebeccapurple;
+    color: white;
+    box-shadow: 4px 3px 13px #0000004a;
+    padding: 20px;
+    margin-bottom: 5px;
+
+}
+
+.alert-wrapper {
+    width: 250px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+@media only screen and (max-width:768px){
+    body {
+        background-color: white;
+    }
+
+    .card img {
+        height: 450px;
+    }
+}
+
+@media only screen and (max-width:420px){
+    body {
+        background-color: black;
+    }
+
+    .card img {
+        height: 250px;
+    }
+}
+

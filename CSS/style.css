@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+nav ul li {
+    color: white;
+    display: inline;
+}
+
+nav ul {
+    background-color: rebeccapurple;
+}
+
+.container ul li {
+    color: red;
+    transition: all 300ms ease-in;
+}
+
+.container ul li:hover{
+    color: royalblue;
+    background-color: tan;
+    font-size: 1em;
+}
+
+.container > li {
+    background-color: sandybrown;
+}
+
+html {
+    font-size: 25px;
+}
+
+body {
+    background-color: royalblue;
+}
+
+.font-style {
+    font-family:'Syne Mono', monospace;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 50px;
+    word-spacing: 20px;
+    /* letter-spacing: 12px; */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+
+.font-wrapper {
+    font-size: 16px;
+}
+
+

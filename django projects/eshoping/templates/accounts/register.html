@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Sign Up
+{% endblock %}
+
+{% block content %}
+<h1>Sign Up</h1>
+
+<form action="" method="post" class="w-50">
+    {% csrf_token %}
+    {{ form | crispy }}
+    <input type="submit" value="Sign Up" class="btn btn-primary">
+</form>
+
+<script>
+    $(document).ready(function(){
+        $('#id_username').keyup(function(){
+            var username = $(this).val()
+            if(username != ''){
+                $.get(`http://127.0.0.1:8000/accounts/check/${username}/`, (res)=>{
+                    if(res=='error'){
+                        $('#hint_id_username').text('user already exists')
+                        $('#hint_id_username').css('color','red')
+                    }
+                    else if(res == 'valid'){
+                        $('#hint_id_username').text('')
+                    }
+                })
+            }
+        })
+    })
+</script>
+
+{% endblock %}

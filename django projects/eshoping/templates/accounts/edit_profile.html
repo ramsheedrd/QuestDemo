@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Sign Up
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col">
+        <h1>Edit Profile</h1>
+        <form action="" method="post" class="w-75">
+            {% csrf_token %}
+            {{ form | crispy }}
+            <input type="submit" value="Update" class="btn btn-primary">
+        </form>
+    </div>
+
+    <div class="col">
+        <h1>Change Photo</h1>
+        <img class="w-25" src="{{ request.user.profilepicture.image.url }}" alt="">
+        <form action="{% url 'photo' %}" method="post" enctype="multipart/form-data" class="w-75">
+            {% csrf_token %}
+            <input type="file" name="photo" id="">
+            <input type="submit" value="Upload" class="btn btn-success">
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Edit Product
+{% endblock %}
+
+{% block content %}
+    <h1>This Action Cant be undone..!</h1>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h4>Are you sure...?</h4>
+        <input class="btn btn-danger" type="submit" value="Delete">
+    </form>
+
+{% endblock %}
